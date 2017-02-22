@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+ol, ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+body {
+    background-image: url('http://desk.fd.zol-img.com.cn/t_s1920x1080c5/g5/M00/01/04/ChMkJ1g2YQeIbYQRABTlVmUrO4AAAYB0gGpqwMAFOVu246.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.short-film {
+    width: 500px;
+    height: 400px;
+    margin: auto;
+}

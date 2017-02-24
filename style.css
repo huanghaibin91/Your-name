@@ -8,14 +8,83 @@ ol, ul {
 a {
     text-decoration: none;
 }
-
+.clearfix {
+    *zoom: 1;
+}
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
 body {
     background-image: url('http://desk.fd.zol-img.com.cn/t_s1920x1080c5/g5/M00/01/04/ChMkJ1g2YQeIbYQRABTlVmUrO4AAAYB0gGpqwMAFOVu246.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
-.short-film {
-    width: 500px;
-    height: 400px;
+.nav-box {
+    width: 100%;
+    height: 50px;
+    background-color: #F2EAD3;
+}
+.nav-box .nav {
+    width: 600px;
+    height: inherit;
     margin: auto;
+    text-align: center;
+    line-height: 50px;
+}
+.nav-box .nav a {
+    display: block;
+    width: 150px;
+    height: inherit;
+    float: left;
+    color: black;
+    transition: all 0.2s ease-out;
+}
+.nav-box .nav a:hover {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.short-film {
+    width: 890px;
+    height: 500px;
+    margin: 30px auto 0 auto;
+}
+.player-box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.danmaku-box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+#play-control {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background: #CCCCCC url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-play-outline-48.png') center no-repeat;
+    opacity: 0.8;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}
+.player-control {
+    background: blue;
+    overflow: hidden;
+}
+.progress-box {
+    width: 700px;
+    height: 10px;
+    margin: 15px auto;
+    background-color: red;
+}
+.progress {
+    height: 100%;
+    background-color: orange;
 }

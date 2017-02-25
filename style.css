@@ -2,30 +2,40 @@
     margin: 0;
     padding: 0;
 }
+
 ol, ul {
     list-style: none;
 }
+
 a {
     text-decoration: none;
 }
+
 .clearfix {
     *zoom: 1;
 }
+
 .clearfix::after {
     content: "";
     display: block;
     clear: both;
 }
+
 body {
     background-image: url('http://desk.fd.zol-img.com.cn/t_s1920x1080c5/g5/M00/01/04/ChMkJ1g2YQeIbYQRABTlVmUrO4AAAYB0gGpqwMAFOVu246.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
+
 .nav-box {
     width: 100%;
     height: 50px;
     background-color: #F2EAD3;
+    opacity: 0.9;
+    position: fixed;
+    top: 0;
+    z-index: 99;
 }
 .nav-box .nav {
     width: 600px;
@@ -34,6 +44,7 @@ body {
     text-align: center;
     line-height: 50px;
 }
+
 .nav-box .nav a {
     display: block;
     width: 150px;
@@ -42,6 +53,7 @@ body {
     color: black;
     transition: all 0.2s ease-out;
 }
+
 .nav-box .nav a:hover {
     font-weight: bold;
     font-size: 18px;
@@ -49,14 +61,13 @@ body {
 
 .short-film {
     width: 890px;
-    height: 500px;
-    margin: 30px auto 0 auto;
+    margin: 80px auto 0 auto;
 }
+
 .player-box {
-    width: 100%;
-    height: 100%;
     position: relative;
 }
+
 .danmaku-box {
     width: 100%;
     height: 100%;
@@ -64,6 +75,7 @@ body {
     top: 0;
     bottom: 0;
 }
+
 #play-control {
     width: 50px;
     height: 50px;
@@ -74,17 +86,144 @@ body {
     right: 30px;
     bottom: 30px;
 }
-.player-control {
-    background: blue;
-    overflow: hidden;
-}
-.progress-box {
-    width: 700px;
-    height: 10px;
-    margin: 15px auto;
+
+#progress-box {
+    width: 100%;
+    height: 5px;
     background-color: red;
+    transition: all 0.6s ease-out;
+    position: absolute;
+    bottom: 0;
+}
+#progress-box.active {
+    height: 15px;
 }
 .progress {
-    height: 100%;
     background-color: orange;
+}
+.control {
+    width: 100%;
+    background: #D0D0D0;
+    overflow: hidden;
+    position: relative;
+}
+
+.control div {
+    width: 50px;
+    height: 40px;
+    margin: 0 10px;
+    text-align: center;
+    float: left;
+}
+
+.control div:hover {
+    background-color: #A0A0A0;
+}
+
+.control .danmaku-send {
+    width: 80px;
+    height: 30px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 30px;
+    background: #2D6CDF;
+    color: white;
+    border-radius: 5px;
+    position: absolute;
+    top: 5px;
+    left: 710px;
+    transition: all 0.5s ease;
+}
+
+.control .danmaku-send:hover {
+    background: #55B3F3;
+}
+
+.control div img {
+    vertical-align: middle;
+    position: relative;
+    top: 8px;
+}
+
+.input-text {
+    border: none;
+    width: 600px;
+    height: 36px;
+    font-size: 18px;
+    float: left;
+    margin: 0 15px;
+    padding: 2px 100px 2px 20px;
+    background: #EEEEEE;
+}
+.synopsis {
+    margin-top: 20px;
+    background: url('http://desk.fd.zol-img.com.cn/t_s1920x1200c5/g5/M00/01/04/ChMkJlg2YRGIXrtCABy9qCTYS60AAYB1AAAAAAAHL3A605.png') no-repeat;
+    background-size: cover;
+    font-family: monospace;
+    color: white;
+    padding: 50px 0;
+}
+.synopsis h3 {
+    font-size: 30px;
+    text-align: center;
+    line-height: 70px;
+    font-weight: bold;
+}
+.synopsis p {
+    text-align: center;
+    line-height: 70px;
+    font-size: 16px;
+}
+.role-box {
+    background: white;
+    color: #094C9E;
+    font-family: monospace;
+    font-size: 14px;
+}
+.role-box h3 {
+    font-size: 30px;
+    text-align: center;
+    line-height: 70px;
+    font-weight: bold;
+
+    padding: 50px 0 20px 0;
+}
+.protagonist {
+    width: 1200px;
+    margin: auto;
+}
+.protagonist div {
+    height: 536px;
+    width: 600px;
+    float: left;
+}
+.long {
+    background: url('images/chara_taki_vsl.png') right no-repeat;
+}
+.sanye {
+    background: url('images/chara_mitsuha_vsl.png') left no-repeat;
+}
+.protagonist div h4 {
+    width: 340px;
+    height: 100px;
+    font-size: 50px;
+}
+.protagonist div p {
+    width: 300px;
+    height: 210px;
+    letter-spacing: 4px;
+    line-height: 30px;
+}
+.long h4, .long p {
+    position: relative;
+    right: -140px;
+}
+.sanye h4, .sanye p {
+    position: relative;
+    left: 200px;
+}
+.protagonist .cast {
+    height: 30px;
+    position: relative;
+    bottom: 10px;
 }

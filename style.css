@@ -21,7 +21,7 @@ a {
     clear: both;
 }
 
-body {
+body, .synopsis::before {
     background-image: url('http://desk.fd.zol-img.com.cn/t_s1920x1080c5/g5/M00/01/04/ChMkJ1g2YQeIbYQRABTlVmUrO4AAAYB0gGpqwMAFOVu246.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -111,7 +111,7 @@ body {
 .control div {
     width: 50px;
     height: 40px;
-    margin: 0 10px;
+    margin: 0 17.5px;
     text-align: center;
     float: left;
 }
@@ -131,7 +131,7 @@ body {
     border-radius: 5px;
     position: absolute;
     top: 5px;
-    left: 710px;
+    left: 700px;
     transition: all 0.5s ease;
 }
 
@@ -147,21 +147,34 @@ body {
 
 .input-text {
     border: none;
-    width: 600px;
+    width: 590px;
     height: 36px;
     font-size: 18px;
     float: left;
-    margin: 0 15px;
-    padding: 2px 100px 2px 20px;
+    padding: 2px 110px 2px 20px;
     background: #EEEEEE;
 }
 .synopsis {
     margin-top: 20px;
-    background: url('http://desk.fd.zol-img.com.cn/t_s1920x1200c5/g5/M00/01/04/ChMkJlg2YRGIXrtCABy9qCTYS60AAYB1AAAAAAAHL3A605.png') no-repeat;
-    background-size: cover;
+    background: hsla(0, 0%, 100%);
+    overflow: hidden;
     font-family: monospace;
+    color: #094C9E;
     color: white;
+    font-weight: bold;
     padding: 50px 0;
+    position: relative;
+}
+.synopsis::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    filter: blur(20px);
+    margin: -30px;
+    z-index: -1;
 }
 .synopsis h3 {
     font-size: 30px;
@@ -173,14 +186,17 @@ body {
     text-align: center;
     line-height: 70px;
     font-size: 16px;
+    letter-spacing: 2px;
 }
 .role-box {
     background: white;
     color: #094C9E;
+}
+.role-box, .staff {
     font-family: monospace;
     font-size: 14px;
 }
-.role-box h3 {
+.role-box h3, .staff h3 {
     font-size: 30px;
     text-align: center;
     line-height: 70px;
@@ -210,9 +226,10 @@ body {
 }
 .protagonist div p {
     width: 300px;
-    height: 210px;
+    height: 316px;
     letter-spacing: 4px;
     line-height: 30px;
+    text-indent: 2em;
 }
 .long h4, .long p {
     position: relative;
@@ -223,7 +240,132 @@ body {
     left: 200px;
 }
 .protagonist .cast {
-    height: 30px;
+    height: 100px;
+    padding-bottom: 20px;
+}
+.protagonist .cast img {
+    vertical-align: middle;
+    border-radius: 50%;
+}
+.costar {
+    width: 840px;
+    margin: auto;
+    padding: 100px 0 0 0;
+}
+.costar>div {
+    float: left;
+    padding: 10px;
+    width: 400px;
+    height: 250px;
+}
+.costar div h4 {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-size: cover;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.costar div:nth-child(2n+1) h4, .costar div:nth-child(2n+1) div {
+    float: right;
+}
+.costar div:nth-child(2n) h4, .costar div:nth-child(2n) div {
+    float: left;
+}
+.costar div h4 span {
     position: relative;
-    bottom: 10px;
+    bottom: -170px;
+}
+.costar div h4 p {
+    position: relative;
+    bottom: -180px;
+}
+.costar div:nth-child(1) h4 {
+    background: url('images/chara_miki_face01.png') center no-repeat;
+}
+.costar div:nth-child(2) h4 {
+    background: url('images/chara_hitoha_face01.png') center no-repeat;
+}
+.costar div:nth-child(3) h4 {
+    background: url('images/chara_yotsuha_ph.png') center no-repeat;
+}
+.costar div:nth-child(4) h4 {
+    background: url('images/chara_fujii_ph.png') center no-repeat;
+}
+.costar div:nth-child(5) h4 {
+    background: url('images/chara_natori_ph.png') center no-repeat;
+}
+.costar div:nth-child(6) h4 {
+    background: url('images/chara_teshigawara_ph.png') center no-repeat;
+}
+.costar div:nth-child(7) h4 {
+    background: url('images/chara_takagi_ph.png') center no-repeat;
+}
+.costar div div {
+    width: 230px;
+    padding: 0 10px;
+    height: 250px;
+    position: relative;
+}
+.costar div div p {
+    line-height: 40px;
+    letter-spacing: 1px;
+    text-indent: 2em;
+}
+.costar div div p:nth-child(2) {
+    position: relative;
+    bottom: -78px;
+}
+.staff {
+    color: white;
+    background: url('http://desk.fd.zol-img.com.cn/t_s1920x1200c5/g5/M00/01/04/ChMkJlg2YRGIXrtCABy9qCTYS60AAYB1AAAAAAAHL3A605.png') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.staff div {
+    margin: auto;
+    padding: 30px 0;
+    width: 600px;
+}
+.staff div h4, .staff div div {
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
+}
+.staff div h4 span {
+    font-size: 30px;
+}
+.staff div p {
+    font-size: 16px;
+    line-height: 30px;
+    text-indent: 2em;
+}
+.staff button {
+    border: 1px solid white;
+    width: 200px;
+    height: 50px;
+    font-family: monospace;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    line-height: 50px;
+    background: none;
+    transition: all 1s ease;
+}
+.staff button:hover {
+    /*background: #094C9E;*/
+    /*opacity: 0.5;*/
+    background: #3366CC;
+}
+.footer {
+    height: 80px;
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
+    background: white;
+}
+.footer p {
+    padding: 10px 0;
 }

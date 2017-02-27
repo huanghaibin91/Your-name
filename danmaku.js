@@ -1,7 +1,7 @@
 window.onload = function() {
     var movie = document.getElementById('movie');
     var playerBox = document.querySelector('.player-box');
-     var progressBox = document.querySelector('#progress-box');
+    var progressBox = document.querySelector('#progress-box');
     playerBox.addEventListener('click', function() {
         play();
     }, false);
@@ -21,6 +21,10 @@ function toggleClassName(ele, cls) {
 }
 
 function play() {
+    // var e = event || window.event;
+    // if (e.target.className == 'play-control') {
+    //     return;
+    // }
     var playcontrol = document.getElementById('play-control');
     if (movie.paused || movie.ended) {
         if (movie.ended) {

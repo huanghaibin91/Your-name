@@ -62,6 +62,7 @@ body, .synopsis::before {
 .short-film {
     width: 890px;
     margin: 80px auto 0 auto;
+    overflow: hidden;
 }
 
 .player-box {
@@ -70,10 +71,16 @@ body, .synopsis::before {
     height: 500px;
 }
 
-/*.danmaku-box {
+.danmaku-box {
     width: 100%;
     height: 100%;
-}*/
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.danmaku-message {
+    position: absolute;
+}
 
 #play-control {
     width: 50px;
@@ -213,10 +220,10 @@ body, .synopsis::before {
     float: left;
 }
 .long {
-    background: url('images/chara_taki_vsl.png') right no-repeat;
+    background: url('../images/chara_taki_vsl.png') right no-repeat;
 }
 .sanye {
-    background: url('images/chara_mitsuha_vsl.png') left no-repeat;
+    background: url('../images/chara_mitsuha_vsl.png') left no-repeat;
 }
 .protagonist div h4 {
     width: 340px;
@@ -280,25 +287,25 @@ body, .synopsis::before {
     bottom: -180px;
 }
 .costar div:nth-child(1) h4 {
-    background: url('images/chara_miki_face01.png') center no-repeat;
+    background: url('../images/chara_miki_face01.png') center no-repeat;
 }
 .costar div:nth-child(2) h4 {
-    background: url('images/chara_hitoha_face01.png') center no-repeat;
+    background: url('../images/chara_hitoha_face01.png') center no-repeat;
 }
 .costar div:nth-child(3) h4 {
-    background: url('images/chara_yotsuha_ph.png') center no-repeat;
+    background: url('../images/chara_yotsuha_ph.png') center no-repeat;
 }
 .costar div:nth-child(4) h4 {
-    background: url('images/chara_fujii_ph.png') center no-repeat;
+    background: url('../images/chara_fujii_ph.png') center no-repeat;
 }
 .costar div:nth-child(5) h4 {
-    background: url('images/chara_natori_ph.png') center no-repeat;
+    background: url('../images/chara_natori_ph.png') center no-repeat;
 }
 .costar div:nth-child(6) h4 {
-    background: url('images/chara_teshigawara_ph.png') center no-repeat;
+    background: url('../images/chara_teshigawara_ph.png') center no-repeat;
 }
 .costar div:nth-child(7) h4 {
-    background: url('images/chara_takagi_ph.png') center no-repeat;
+    background: url('../images/chara_takagi_ph.png') center no-repeat;
 }
 .costar div div {
     width: 230px;

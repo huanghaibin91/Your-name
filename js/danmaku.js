@@ -23,11 +23,11 @@ $(document).ready(function() {
         arr.push(text);
         var textObj = $('<div class=\"danmaku-message\"></div>');
         textObj.text(text);
-        $('.damaku-box').append(textObj);
+        $('.danmaku-box').append(textObj);
         danmakuMove(textObj);
     });
 
-    var topMin = $('.player-box').offset().top;
+    var topMin = $('.player-box').offset().top - 50;
     var topMax = topMin + $('.player-box').height();
     var textTop = topMin;
     var danmakuMove = function(obj) {
@@ -43,27 +43,31 @@ $(document).ready(function() {
         });
         var time = 20000 + 10000 * Math.random();
         obj.animate({
-            left: '-' + textLeft + 'px'
+            left: '-' + obj.width() + 'px'
         }, time, function() {
             obj.remove();
+            // ref.remove();
         });
     };
+    console.log(arr);
     var getReandomColor = function() {
         return '#' + (function(num) {
             return new Array(7 - num.length).join("0") + num
         })((Math.random() * 0x1000000 << 0).toString(16))
     };
-    var getAndRun = function() {
-        if (arr.length > 0) {
-            var n = Math.floor(Math.random() * arr.length + 1) - 1;
-            var textObj = $("<div>" + arr[n] + "</div>");
-            $(".damaku-box").append(textObj);
-            danmakuMove(textObj);
-        }
 
-        setTimeout(getAndRun, 3000);
-    }
+    // var getAndRun = function() {
+    //     if (arr.length > 0) {
+    //         var n = Math.floor(Math.random() * arr.length + 1) - 1;
+    //         var textObj = $("<span>" + arr[n] + "</span>");
+    //         $(".damaku-box").append(textObj);
+    //         danmakuMove(textObj);
+    //     }
+    //
+    //     setTimeout(getAndRun, 3000);
+    // }
+    //
+    // jQuery.fx.interval = 50;
+    // getAndRun();
 
-    jQuery.fx.interval = 50;
-    getAndRun();
 });

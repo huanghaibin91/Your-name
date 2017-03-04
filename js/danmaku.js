@@ -27,13 +27,13 @@ $(document).ready(function() {
         danmakuMove(textObj);
     });
 
-    var topMin = $('.player-box').offset().top - 50;
-    var topMax = topMin + $('.player-box').height();
+    var topMin = 50;
+    var topMax = topMin + $('.player-box').height() - 100;
     var textTop = topMin;
     var danmakuMove = function(obj) {
         var textLeft = $('.player-box').width() - obj.width();
         textTop = textTop + 50;
-        if (textTop > (topMax - 50)) {
+        if (textTop > topMax) {
             textTop = topMin;
         }
         obj.css({
@@ -59,7 +59,7 @@ $(document).ready(function() {
     // var getAndRun = function() {
     //     if (arr.length > 0) {
     //         var n = Math.floor(Math.random() * arr.length + 1) - 1;
-    //         var textObj = $("<span>" + arr[n] + "</span>");
+    //         var textObj = $("<div>" + arr[n] + "</div>");
     //         $(".damaku-box").append(textObj);
     //         danmakuMove(textObj);
     //     }

@@ -2,6 +2,9 @@ window.onload = function() {
     var movie = document.getElementById('movie');
     var playerBox = document.querySelector('.player-box');
     var progressBox = document.querySelector('#progress-box');
+    // 元素居中
+    var productionList = document.querySelector('.production-list');
+    productionList.style.top = (getInner().height - productionList.offsetHeight) / 2 + 'px';
     playerBox.addEventListener('click', function() {
         play();
     }, false);
@@ -43,4 +46,19 @@ function getProgress() {
     var progress = document.querySelector('.progress');
     var percent = movie.currentTime / movie.duration;
     progress.style.width = percent * (progressBox.offsetWidth) + "px";
+}
+
+
+function getInner() {
+	if (typeof window.innerWidth != 'undefined') {
+		return {
+			width : window.innerWidth,
+			height : window.innerHeight
+		}
+	} else {
+		return {
+			width : document.documentElement.clientWidth,
+			height : document.documentElement.clientHeight
+		}
+	}
 }

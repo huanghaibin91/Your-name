@@ -9,6 +9,11 @@ ol, ul {
 
 a {
     text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
 }
 
 .clearfix {
@@ -19,6 +24,14 @@ a {
     content: "";
     display: block;
     clear: both;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
 }
 
 body, .synopsis::before {
@@ -45,7 +58,7 @@ body, .synopsis::before {
     line-height: 50px;
 }
 
-.nav-box .nav a {
+.nav-box .nav li {
     display: block;
     width: 150px;
     height: inherit;
@@ -53,9 +66,10 @@ body, .synopsis::before {
     color: black;
     -webkit-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
+    cursor: pointer;
 }
 
-.nav-box .nav a:hover {
+.nav-box .nav li:hover {
     font-weight: bold;
     font-size: 18px;
 }
@@ -87,11 +101,12 @@ body, .synopsis::before {
     width: 50px;
     height: 50px;
     border-radius: 10px;
-    background: #CCCCCC url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-play-outline-48.png') center no-repeat;
+    background: #CCCCCC url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-play-outline-48.png') 5px 0 no-repeat;
     opacity: 0.8;
     position: absolute;
     right: 30px;
     bottom: 30px;
+    cursor: pointer;
 }
 
 #progress-box {
@@ -165,7 +180,6 @@ body, .synopsis::before {
 }
 .synopsis {
     margin-top: 20px;
-    background: hsla(0, 0%, 100%);
     overflow: hidden;
     font-family: monospace;
     color: #094C9E;
@@ -174,13 +188,15 @@ body, .synopsis::before {
     padding: 50px 0;
     position: relative;
 }
-.synopsis::before {
+.synopsis:before {
     content: "";
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    -moz-filter: blur(20px);
+    -ms-filter: blur(20px);
     -webkit-filter: blur(20px);
             filter: blur(20px);
     margin: -30px;
@@ -373,7 +389,6 @@ body, .synopsis::before {
     position: fixed;
     z-index: 99;
     text-align: center;
-    display: none;
 }
 .production-list>button {
     display: block;
@@ -384,7 +399,7 @@ body, .synopsis::before {
     line-height: 30px;
     font-size: 30px;
     color: white;
-    background-color: transparent;
+    background: transparent;
     position: relative;
     left: 90%;
 }

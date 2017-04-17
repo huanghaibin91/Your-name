@@ -31,7 +31,6 @@ window.onload = function() {
         }, false);
         // 进度条跳转
         progressBox.addEventListener('click', function(e) {
-            console.log(e.offsetX);
             movie.currentTime = (e.offsetX / this.offsetWidth) * movie.duration;
         }, false);
         // 全屏

@@ -159,6 +159,7 @@ body, .synopsis::before {
     left: 700px;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
+    cursor: pointer;
 }
 
 .control .danmaku-send:hover {

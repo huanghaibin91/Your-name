@@ -34,6 +34,10 @@ button {
     display: none;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 body, .synopsis::before {
     background-image: url('http://desk.fd.zol-img.com.cn/t_s1920x1080c5/g5/M00/01/04/ChMkJ1g2YQeIbYQRABTlVmUrO4AAAYB0gGpqwMAFOVu246.jpg');
     background-repeat: no-repeat;
@@ -78,12 +82,14 @@ body, .synopsis::before {
     width: 890px;
     margin: 80px auto 0 auto;
     overflow: hidden;
+    background-color: #fff;
 }
 
 .player-box {
     position: relative;
     width: 890px;
     height: 500px;
+    z-index: 9;
 }
 
 .danmaku-box {

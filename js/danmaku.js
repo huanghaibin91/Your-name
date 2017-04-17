@@ -67,8 +67,8 @@ $(document).ready(function () {
             var textObj = $('<div class=\"danmaku-message\">' + arr[n] + '</div>');
             $(".danmaku-box").append(textObj);
             danmakuMove(textObj);
-            setTimeout(getAndRun, 3000);
         }
+        setTimeout(getAndRun, 3000);
     };
     jQuery.fx.interval = 50;
     getAndRun();

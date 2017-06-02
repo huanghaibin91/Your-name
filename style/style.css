@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: "Microsoft YaHei" sans-serif;
 }
 
 ol, ul {
@@ -39,7 +40,7 @@ body {
 }
 
 body, .synopsis::before {
-    background-image: url('http://desk.fd.zol-img.com.cn/t_s1920x1080c5/g5/M00/01/04/ChMkJ1g2YQeIbYQRABTlVmUrO4AAAYB0gGpqwMAFOVu246.jpg');
+    background-image: url('../images/ChMkJ1g2YQeIbYQRABTlVmUrO4AAAYB0gGpqwMAFOVu246.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -55,7 +56,7 @@ body, .synopsis::before {
     z-index: 99;
 }
 .nav-box .nav {
-    width: 600px;
+    width: 480px;
     height: inherit;
     margin: auto;
     text-align: center;
@@ -64,18 +65,19 @@ body, .synopsis::before {
 
 .nav-box .nav li {
     display: block;
-    width: 150px;
-    height: inherit;
+    width: 120px;
+    height: 50px;
     float: left;
-    color: black;
+    color: #2b2e4a;
+    font-weight: bold;
     -webkit-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
     cursor: pointer;
 }
 
 .nav-box .nav li:hover {
-    font-weight: bold;
-    font-size: 18px;
+    background: #f38181;
+    color: white;
 }
 
 .short-film {
@@ -107,7 +109,7 @@ body, .synopsis::before {
     width: 50px;
     height: 50px;
     border-radius: 10px;
-    background: #CCCCCC url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-play-outline-48.png') 5px 0 no-repeat;
+    background: #CCCCCC url('../images/icon-ios7-play-outline-48.png') 5px 0 no-repeat;
     opacity: 0.8;
     position: absolute;
     right: 30px;
@@ -226,6 +228,9 @@ body, .synopsis::before {
 .role-box {
     background: white;
     color: #094C9E;
+}
+.role-box a:hover {
+    text-decoration: underline;
 }
 .role-box, .staff {
     font-family: monospace;
@@ -353,7 +358,7 @@ body, .synopsis::before {
 }
 .staff {
     color: white;
-    background: url('http://desk.fd.zol-img.com.cn/t_s1920x1200c5/g5/M00/01/04/ChMkJlg2YRGIXrtCABy9qCTYS60AAYB1AAAAAAAHL3A605.png') no-repeat;
+    background: url('../images/ChMkJlg2YRGIXrtCABy9qCTYS60AAYB1AAAAAAAHL3A605.png') no-repeat;
     background-size: cover;
     background-attachment: fixed;
     padding-bottom: 50px;
@@ -395,7 +400,7 @@ body, .synopsis::before {
 .production-list {
     width: 100%;
     height: 450px;
-    background: url('http://desk.fd.zol-img.com.cn/t_s1920x1200c5/g5/M00/01/04/ChMkJlg2YRGIXrtCABy9qCTYS60AAYB1AAAAAAAHL3A605.png');
+    background: url('../images/ChMkJlg2YRGIXrtCABy9qCTYS60AAYB1AAAAAAAHL3A605.png');
     position: fixed;
     z-index: 99;
     text-align: center;
@@ -403,11 +408,11 @@ body, .synopsis::before {
 .production-list>button {
     display: block;
     border: 1px solid white;
-    width: 30px;
+    width: 50px;
     height: 30px;
     margin: 10px 0;
     line-height: 30px;
-    font-size: 30px;
+    font-size: 16px;
     color: white;
     background: transparent;
     position: relative;
@@ -436,6 +441,9 @@ body, .synopsis::before {
     line-height: 30px;
     font-weight: bold;
     padding: 0 3px;
+}
+.production-list>button:hover, .production-list div a:hover {
+    background: #3490de;
 }
 .footer {
     height: 80px;
